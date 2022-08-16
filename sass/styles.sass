@@ -1,5 +1,5 @@
 @use 'variables' as var
-@use 'breakpoints'
+@use 'breakpoints' as b
 @use 'resets'
     
 body
@@ -17,15 +17,22 @@ body
         min-height: calc(100vh - 0.1px)
 
         .card_container
-            background-color: var.$dark-blue
+            background: radial-gradient(circle at top, var.$dark-blue, rgba(var.$dark-blue, 0.4))
             display: flex
-            //flex-direction: column
             height: 75%
             width: 85%
             min-height: 350px
             min-width: 325px
-            border-radius: 15px
+            border-radius: 10%
             padding: 1.25em
+
+            @include b.landscape
+                width: 40%
+
+            @include b.desktop
+                padding: 1.5em
+                width: 25%
+                min-height: 380px
 
             .card_rating_container
                 display: none
@@ -46,7 +53,7 @@ body
                     & svg
                         transform: translateY(20%) scale(0.9)
 
-                .topline
+                .rate_topline
                     font-weight: 700
                     font-size: 1.5rem
 
@@ -67,9 +74,20 @@ body
                         border-radius: 50%
                         color: var.$medium-grey
 
+                        &:hover
+                            background-color: var.$orange
+                            color: white
+                            cursor: pointer
+
+                    .rate_number.active_rate
+                        background-color: hsl(217, 12%, 63%)
+                        color: white
+
+                        
+
                 .submit_btn_wrapper
                     display: flex
-                    height: 42.5px
+                    height: 40px
 
                     .submit_btn
                         background-color: var.$orange
@@ -80,6 +98,11 @@ body
                         border-radius: 20px
                         text-transform: uppercase
                         letter-spacing: 1px
+
+                        &:hover
+                            background-color: white
+                            color: var.$orange
+                            cursor: pointer
 
                         
         .card_thanks_container
@@ -102,7 +125,7 @@ body
                     margin: 0 auto
                     padding: 0.5em
 
-                .topline
+                .thanks_topline
                     font-weight: 700
                     font-size: 1.5rem
 

@@ -30,7 +30,7 @@ body main {
   min-height: calc(100vh - 0.1px);
 }
 body main .card_container {
-  background-color: hsl(213deg, 19%, 18%);
+  background: radial-gradient(circle at top, hsl(213deg, 19%, 18%), rgba(37, 45, 55, 0.4));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,8 +38,20 @@ body main .card_container {
   width: 85%;
   min-height: 350px;
   min-width: 325px;
-  border-radius: 15px;
+  border-radius: 10%;
   padding: 1.25em;
+}
+@media screen and (orientation: landscape) {
+  body main .card_container {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body main .card_container {
+    padding: 1.5em;
+    width: 25%;
+    min-height: 380px;
+  }
 }
 body main .card_container .card_rating_container {
   display: none;
@@ -67,7 +79,7 @@ body main .card_container .card_rating_container.active .star_svg_wrapper svg {
   -webkit-transform: translateY(20%) scale(0.9);
           transform: translateY(20%) scale(0.9);
 }
-body main .card_container .card_rating_container.active .topline {
+body main .card_container .card_rating_container.active .rate_topline {
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -92,11 +104,20 @@ body main .card_container .card_rating_container.active .rates_wrapper .rate_num
   border-radius: 50%;
   color: hsl(216deg, 12%, 54%);
 }
+body main .card_container .card_rating_container.active .rates_wrapper .rate_number:hover {
+  background-color: hsl(25deg, 97%, 53%);
+  color: white;
+  cursor: pointer;
+}
+body main .card_container .card_rating_container.active .rates_wrapper .rate_number.active_rate {
+  background-color: hsl(217deg, 12%, 63%);
+  color: white;
+}
 body main .card_container .card_rating_container.active .submit_btn_wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 42.5px;
+  height: 40px;
 }
 body main .card_container .card_rating_container.active .submit_btn_wrapper .submit_btn {
   background-color: hsl(25deg, 97%, 53%);
@@ -107,6 +128,11 @@ body main .card_container .card_rating_container.active .submit_btn_wrapper .sub
   border-radius: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+body main .card_container .card_rating_container.active .submit_btn_wrapper .submit_btn:hover {
+  background-color: white;
+  color: hsl(25deg, 97%, 53%);
+  cursor: pointer;
 }
 body main .card_thanks_container {
   display: none;
@@ -136,11 +162,11 @@ body main .card_thanks_container.active .selected_rate_wrapper {
   margin: 0 auto;
   padding: 0.5em;
 }
-body main .card_thanks_container.active .topline {
+body main .card_thanks_container.active .thanks_topline {
   font-weight: 700;
   font-size: 1.5rem;
 }
 body main .card_thanks_container.active .thanks_description {
   font-size: 0.9375rem;
   color: hsl(216deg, 12%, 54%);
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=styles.css.map */
