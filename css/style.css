@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass";
+  background-color: hsl(216deg, 12%, 8%);
+  color: white;
+}
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 0.1px);
+}
+body main .card_container {
+  background-color: hsl(213deg, 19%, 18%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75%;
+  width: 85%;
+  min-height: 350px;
+  min-width: 325px;
+  border-radius: 15px;
+  padding: 1.25em;
+}
+body main .card_container .card_rating_container {
+  display: none;
+}
+body main .card_container .card_rating_container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+body main .card_container .card_rating_container.active .star_svg_wrapper {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  border-radius: 50%;
+}
+body main .card_container .card_rating_container.active .star_svg_wrapper svg {
+  -webkit-transform: translateY(20%) scale(0.9);
+          transform: translateY(20%) scale(0.9);
+}
+body main .card_container .card_rating_container.active .topline {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+body main .card_container .card_rating_container.active .rate_description {
+  font-size: 0.875rem;
+  color: hsl(216deg, 12%, 54%);
+}
+body main .card_container .card_rating_container.active .rates_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body main .card_container .card_rating_container.active .rates_wrapper .rate_number {
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  color: hsl(216deg, 12%, 54%);
+}
+body main .card_container .card_rating_container.active .submit_btn_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42.5px;
+}
+body main .card_container .card_rating_container.active .submit_btn_wrapper .submit_btn {
+  background-color: hsl(25deg, 97%, 53%);
+  color: white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+body main .card_thanks_container {
+  display: none;
+}
+body main .card_thanks_container.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+body main .card_thanks_container.active .thanks_svg_wrapper {
+  text-align: center;
+}
+body main .card_thanks_container.active .selected_rate_wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  color: hsl(25deg, 97%, 53%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+body main .card_thanks_container.active .topline {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+body main .card_thanks_container.active .thanks_description {
+  font-size: 0.9375rem;
+  color: hsl(216deg, 12%, 54%);
+}/*# sourceMappingURL=style.css.map */

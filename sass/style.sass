@@ -1,0 +1,116 @@
+@use 'variables' as var
+@use 'breakpoints'
+@use 'resets'
+    
+body
+    font-family: var.$overpass
+    background-color: var.$very-dark-blue
+    color: white
+
+    main
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        height: 100%
+        width: 100%
+        min-height: calc(100vh - 0.1px)
+
+        .card_container
+            background-color: var.$dark-blue
+            display: flex
+            //flex-direction: column
+            height: 75%
+            width: 85%
+            min-height: 350px
+            min-width: 325px
+            border-radius: 15px
+            padding: 1.25em
+
+            .card_rating_container
+                display: none
+
+            .card_rating_container.active
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+
+                .star_svg_wrapper
+                    width: 40px
+                    height: 40px
+                    line-height: 40px
+                    background-color: rgb(255,255,255,0.05)
+                    text-align: center
+                    border-radius: 50%
+
+                    & svg
+                        transform: translateY(20%) scale(0.9)
+
+                .topline
+                    font-weight: 700
+                    font-size: 1.5rem
+
+                .rate_description
+                    font-size: 0.875rem
+                    color: var.$medium-grey
+
+                .rates_wrapper
+                    display: flex
+                    justify-content: space-between
+
+                    .rate_number
+                        background-color: rgb(255,255,255,0.05)
+                        width: 40px
+                        height: 40px
+                        line-height: 40px
+                        text-align: center
+                        border-radius: 50%
+                        color: var.$medium-grey
+
+                .submit_btn_wrapper
+                    display: flex
+                    height: 42.5px
+
+                    .submit_btn
+                        background-color: var.$orange
+                        color: white
+                        width: 100%
+                        height: 100%
+                        border: none
+                        border-radius: 20px
+                        text-transform: uppercase
+                        letter-spacing: 1px
+
+                        
+        .card_thanks_container
+                display: none
+
+        .card_thanks_container.active
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                text-align: center
+
+                .thanks_svg_wrapper
+                    text-align: center
+
+                .selected_rate_wrapper
+                    background-color: rgb(255,255,255,0.05)
+                    border-radius: 15px
+                    color: var.$orange
+                    width: fit-content
+                    margin: 0 auto
+                    padding: 0.5em
+
+                .topline
+                    font-weight: 700
+                    font-size: 1.5rem
+
+                .thanks_description
+                    font-size: 0.9375rem
+                    color: var.$medium-grey
+                    
+                    
+                        
+
+
